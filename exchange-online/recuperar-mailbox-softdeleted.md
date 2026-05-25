@@ -18,19 +18,14 @@ Dependendo do cenário, a mailbox pode estar em um dos seguintes estados:
 
 Se a mailbox ainda estiver recuperável, uma alternativa é criar uma nova mailbox de destino e restaurar o conteúdo usando o cmdlet `New-MailboxRestoreRequest`.
 
+> **Atenção:** este procedimento deve ser avaliado conforme o estado real da mailbox, políticas de retenção/compliance e período de retenção do tenant. Em caso de incidente de segurança, também é recomendado revisar logs de auditoria, regras de caixa de entrada, permissões delegadas e métodos de autenticação.
+
 ## Referências Microsoft
 
-- New-MailboxRestoreRequest:  
-  https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/new-mailboxrestorerequest
-
-- Delete or restore user mailboxes in Exchange Online:  
-  https://learn.microsoft.com/en-us/exchange/recipients-in-exchange-online/delete-or-restore-mailboxes
-
-- Restore inactive mailbox:  
-  https://learn.microsoft.com/en-us/purview/restore-an-inactive-mailbox
-
-- Set-MailboxRegionalConfiguration:  
-  https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/set-mailboxregionalconfiguration
+- [New-MailboxRestoreRequest](https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/new-mailboxrestorerequest)
+- [Delete or restore user mailboxes in Exchange Online](https://learn.microsoft.com/en-us/exchange/recipients-in-exchange-online/delete-or-restore-mailboxes)
+- [Restore inactive mailbox](https://learn.microsoft.com/en-us/purview/restore-an-inactive-mailbox)
+- [Set-MailboxRegionalConfiguration](https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/set-mailboxregionalconfiguration)
 
 ---
 
@@ -123,8 +118,12 @@ Set-MsolUserLicense `
   -AddLicenses "tenant:SKU_DA_LICENCA"
 ```
 
-> Ajuste o SKU conforme a licença disponível no tenant.
+> Ajuste o SKU conforme a licença disponível no tenant.  
 > Exemplo: Business Basic, Business Standard, Exchange Online Plan 1, entre outras.
+
+> Observação: os comandos `New-MsolUser` e `Set-MsolUserLicense` são exemplos legados do módulo MSOnline. Em novos ambientes, avalie utilizar o Microsoft Graph PowerShell ou criar/licenciar o usuário pelo Microsoft 365 admin center.
+
+---
 
 ---
 
