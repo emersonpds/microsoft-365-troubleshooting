@@ -30,10 +30,11 @@ Compartilhar procedimentos práticos baseados em cenários reais de suporte téc
 ### Exchange Online
 
 - [Recuperar mailbox soft-deleted no Exchange Online](./exchange-online/recuperar-mailbox-softdeleted.md)
+- [Mensagens legítimas caindo no Lixo Eletrônico/Spam em destinatários Microsoft](./exchange-online/mensagens-legitimas-spam-destinatarios-microsoft.md)
 
 ### Microsoft Teams
 
-- [Bloquear ou limitar contato com contas pessoais e não gerenciadas no Teams](./teams/bloquear-contas-pessoais-nao-gerenciadas.md)
+- [Bloquear ou limitar contato com contas pessoais e não gerenciadas no Microsoft Teams](./teams/bloquear-contas-pessoais-nao-gerenciadas.md)
 
 ## Aviso
 
