@@ -17,15 +17,26 @@ Compartilhar procedimentos práticos baseados em cenários reais de suporte téc
 
 ## Categorias
 
+- [Exchange Online](./exchange-online/)
+- [Microsoft Teams](./teams/)
 - OneDrive
-- Exchange Online
 - SharePoint Online
-- Microsoft Teams
 - Microsoft Entra ID
 - Azure
 - PowerShell
 
+## Artigos publicados
+
+### Exchange Online
+
+- [Recuperar mailbox soft-deleted no Exchange Online](./exchange-online/recuperar-mailbox-softdeleted.md)
+
+### Microsoft Teams
+
+- [Bloquear ou limitar contato com contas pessoais e não gerenciadas no Teams](./teams/bloquear-contas-pessoais-nao-gerenciadas.md)
+
 ## Aviso
 
-Este conteúdo tem finalidade técnica e educacional.  
+Este conteúdo tem finalidade técnica e educacional.
+
 Os procedimentos devem ser avaliados e adaptados conforme o ambiente de cada organização.
