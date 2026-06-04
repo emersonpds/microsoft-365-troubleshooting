@@ -1,4 +1,3 @@
-````markdown
 # Mensagens legítimas caindo no Lixo Eletrônico/Spam em destinatários Microsoft
 
 ## Cenário
@@ -80,7 +79,7 @@ Conecte no Exchange Online:
 
 ```powershell
 Connect-ExchangeOnline
-````
+```
 
 Pesquise a mensagem pelo remetente e destinatário:
 
@@ -196,10 +195,10 @@ SCL:9
 
 Interpretação prática:
 
-* `SCL:-1`: a mensagem ignorou a filtragem de spam por regra, allow ou bypass.
-* `SCL:0` ou `SCL:1`: baixa probabilidade de spam.
-* `SCL:5` ou `SCL:6`: probabilidade média de spam, podendo ser entregue no Lixo Eletrônico.
-* `SCL:7`, `SCL:8` ou `SCL:9`: alta probabilidade de spam, podendo ir para Lixo Eletrônico ou Quarentena, dependendo da política aplicada.
+- `SCL:-1`: a mensagem ignorou a filtragem de spam por regra, allow ou bypass.
+- `SCL:0` ou `SCL:1`: baixa probabilidade de spam.
+- `SCL:5` ou `SCL:6`: probabilidade média de spam, podendo ser entregue no Lixo Eletrônico.
+- `SCL:7`, `SCL:8` ou `SCL:9`: alta probabilidade de spam, podendo ir para Lixo Eletrônico ou Quarentena, dependendo da política aplicada.
 
 ## 7. Analisar o BCL
 
@@ -232,12 +231,12 @@ CAT:SPOOF
 
 Interpretação prática:
 
-* `SPM`: spam.
-* `HSPM`: high confidence spam.
-* `PHISH`: phishing.
-* `HPHISH`: high confidence phishing.
-* `BULK`: mensagem classificada como bulk.
-* `SPOOF`: possível spoofing.
+- `SPM`: spam.
+- `HSPM`: high confidence spam.
+- `PHISH`: phishing.
+- `HPHISH`: high confidence phishing.
+- `BULK`: mensagem classificada como bulk.
+- `SPOOF`: possível spoofing.
 
 Quando a mensagem é classificada como `HPHISH`, a análise deve ser mais cuidadosa, pois a detecção pode estar relacionada a sinais avançados de phishing, reputação de URL, impersonation, spoofing ou outros indicadores de ameaça.
 
@@ -245,17 +244,17 @@ Quando a mensagem é classificada como `HPHISH`, a análise deve ser mais cuidad
 
 Quando o destinatário também utiliza Microsoft 365, o administrador do tenant destinatário deve validar:
 
-* Anti-spam policies;
-* Anti-phishing policies;
-* Safe Links;
-* Safe Attachments;
-* Tenant Allow/Block List;
-* regras de transporte;
-* lista de remetentes bloqueados do usuário;
-* regras de caixa de correio;
-* configuração de Junk Email no Outlook;
-* Quarantine;
-* Explorer ou Real-time detections, se houver Microsoft Defender for Office 365.
+- Anti-spam policies;
+- Anti-phishing policies;
+- Safe Links;
+- Safe Attachments;
+- Tenant Allow/Block List;
+- regras de transporte;
+- lista de remetentes bloqueados do usuário;
+- regras de caixa de correio;
+- configuração de Junk Email no Outlook;
+- Quarantine;
+- Explorer ou Real-time detections, se houver Microsoft Defender for Office 365.
 
 Esse ponto é importante porque o remetente normalmente não possui visibilidade das políticas aplicadas no ambiente destinatário.
 
@@ -265,14 +264,14 @@ Nem toda mensagem que aparece no Lixo Eletrônico foi necessariamente entregue d
 
 Ela pode ter sido movida após a entrega por:
 
-* regra de caixa de correio do usuário;
-* bloqueio manual do remetente no Outlook;
-* política aplicada após entrega;
-* ação de segurança posterior;
-* cliente de e-mail;
-* add-in de segurança de terceiros;
-* regra de transporte;
-* configuração local do mailbox.
+- regra de caixa de correio do usuário;
+- bloqueio manual do remetente no Outlook;
+- política aplicada após entrega;
+- ação de segurança posterior;
+- cliente de e-mail;
+- add-in de segurança de terceiros;
+- regra de transporte;
+- configuração local do mailbox.
 
 Por isso, é importante validar se o cabeçalho indica uma classificação direta como spam ou se houve algum outro mecanismo alterando a localização da mensagem depois da entrega.
 
@@ -280,17 +279,17 @@ Por isso, é importante validar se o cabeçalho indica uma classificação diret
 
 Mesmo com SPF, DKIM e DMARC aprovados, alguns fatores podem impactar a entrega:
 
-* envio em massa para muitos destinatários;
-* mensagens muito parecidas enviadas em curto período;
-* links encurtados;
-* URLs com baixa reputação;
-* anexos suspeitos;
-* conteúdo com características de campanha comercial;
-* domínio novo ou com pouco histórico;
-* reclamações anteriores de usuários;
-* automações enviando e-mails em grande volume;
-* conta comprometida enviando mensagens fora do padrão;
-* assinatura de e-mail com imagens, links ou redirecionamentos.
+- envio em massa para muitos destinatários;
+- mensagens muito parecidas enviadas em curto período;
+- links encurtados;
+- URLs com baixa reputação;
+- anexos suspeitos;
+- conteúdo com características de campanha comercial;
+- domínio novo ou com pouco histórico;
+- reclamações anteriores de usuários;
+- automações enviando e-mails em grande volume;
+- conta comprometida enviando mensagens fora do padrão;
+- assinatura de e-mail com imagens, links ou redirecionamentos.
 
 Uma validação útil é enviar mensagens de teste em etapas:
 
@@ -325,10 +324,10 @@ Porém, é importante validar o tipo de bloqueio antes de criar uma entrada de a
 
 Exemplos:
 
-* Se a mensagem foi classificada como spam ou bulk, pode ser possível criar uma entrada de allow.
-* Se foi detectada como spoofing, pode ser necessário tratar via submissão ou spoof intelligence.
-* Se foi detectada como impersonation, o ajuste pode estar relacionado à política antiphishing.
-* Se foi classificada como high confidence phishing, podem existir limitações para liberação direta, dependendo da detecção aplicada.
+- Se a mensagem foi classificada como spam ou bulk, pode ser possível criar uma entrada de allow.
+- Se foi detectada como spoofing, pode ser necessário tratar via submissão ou spoof intelligence.
+- Se foi detectada como impersonation, o ajuste pode estar relacionado à política antiphishing.
+- Se foi classificada como high confidence phishing, podem existir limitações para liberação direta, dependendo da detecção aplicada.
 
 Também é importante lembrar que entradas de block podem ter precedência sobre entradas de allow. Portanto, antes de criar uma liberação, valide se já existe algum bloqueio configurado para o remetente, domínio, URL ou IP.
 
@@ -428,18 +427,18 @@ Essa comparação ajuda a identificar se o problema estava relacionado ao conte�
 
 ## Pontos de atenção
 
-* SPF, DKIM e DMARC aprovados não garantem entrega na Caixa de Entrada.
-* Se o destinatário está em outro tenant, o remetente não tem visibilidade completa das políticas aplicadas no destino.
-* O cabeçalho completo da mensagem é essencial para análise.
-* Message Trace do remetente mostra o fluxo de saída, mas não substitui a análise do tenant destinatário.
-* Whitelist ampla deve ser evitada.
-* A submissão de falso positivo é o caminho mais adequado quando a classificação da Microsoft aparenta estar incorreta.
-* Mensagens classificadas como `HPHISH` exigem atenção maior.
-* Links, assinaturas com imagens, redirecionadores e anexos podem alterar a classificação da mensagem.
-* Se o problema ocorre apenas com um destinatário, pode ser configuração local do usuário ou política específica daquele tenant.
-* Se o problema ocorre com vários destinatários Microsoft, pode indicar reputação, autenticação, conteúdo, URL ou padrão de envio.
-* Entradas na Tenant Allow/Block List devem ser temporárias e bem justificadas.
-* Sempre que possível, a correção deve tratar a causa raiz, não apenas forçar a entrega por allow list.
+- SPF, DKIM e DMARC aprovados não garantem entrega na Caixa de Entrada.
+- Se o destinatário está em outro tenant, o remetente não tem visibilidade completa das políticas aplicadas no destino.
+- O cabeçalho completo da mensagem é essencial para análise.
+- Message Trace do remetente mostra o fluxo de saída, mas não substitui a análise do tenant destinatário.
+- Whitelist ampla deve ser evitada.
+- A submissão de falso positivo é o caminho mais adequado quando a classificação da Microsoft aparenta estar incorreta.
+- Mensagens classificadas como `HPHISH` exigem atenção maior.
+- Links, assinaturas com imagens, redirecionadores e anexos podem alterar a classificação da mensagem.
+- Se o problema ocorre apenas com um destinatário, pode ser configuração local do usuário ou política específica daquele tenant.
+- Se o problema ocorre com vários destinatários Microsoft, pode indicar reputação, autenticação, conteúdo, URL ou padrão de envio.
+- Entradas na Tenant Allow/Block List devem ser temporárias e bem justificadas.
+- Sempre que possível, a correção deve tratar a causa raiz, não apenas forçar a entrega por allow list.
 
 ## Resumo
 
@@ -450,8 +449,3 @@ Essas validações são importantes, mas a classificação final pode considerar
 O melhor caminho é coletar o cabeçalho completo da mensagem, revisar o Message Trace, analisar os campos antispam e validar se há políticas ou ações específicas no tenant destinatário.
 
 Em casos de falso positivo, a recomendação é submeter a mensagem para análise da Microsoft e evitar liberações amplas e permanentes sem validação técnica.
-
-```
-```
-
-[1]: https://learn.microsoft.com/en-us/defender-office-365/message-headers-eop-mdo "Anti-spam message headers - Microsoft Defender for Office 365 | Microsoft Learn"
