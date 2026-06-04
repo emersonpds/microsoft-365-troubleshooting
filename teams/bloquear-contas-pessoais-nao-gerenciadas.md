@@ -212,22 +212,6 @@ External users with Teams accounts not managed by an organization can contact us
 
 Assim, o contato só ocorre quando iniciado pelos usuários internos.
 
-## Modelo de resposta para o cliente
-
-```text
-Prezados, bom dia.
-
-Sim, existe configuração no Teams Admin Center para mitigar esse cenário.
-
-A recomendação é revisar as configurações de External access, principalmente a comunicação com contas Teams não gerenciadas por uma organização. Caso a empresa não tenha necessidade de comunicação com contas pessoais/Teams gratuito, o mais seguro é desabilitar a opção que permite comunicação com contas não gerenciadas.
-
-Também é possível manter a comunicação habilitada, mas impedir que contas externas não gerenciadas iniciem contato com usuários internos. Nesse modelo, apenas os usuários da organização conseguiriam iniciar a conversa.
-
-Caminho no portal:
-Teams Admin Center > Users > External access
-
-Nessa tela, devem ser revisadas as opções relacionadas a unmanaged Teams accounts, domínios externos e usuários externos bloqueados.
-```
 
 ## Referências oficiais
 
