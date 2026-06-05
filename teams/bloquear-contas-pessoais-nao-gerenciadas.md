@@ -132,7 +132,7 @@ Get-CsTenantFederationConfiguration | Select-Object `
   AllowPublicUsers
 ```
 
-Campos importantes:
+### Campos importantes
 
 | Campo | Significado |
 |---|---|
