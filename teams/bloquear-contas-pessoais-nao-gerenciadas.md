@@ -22,6 +22,8 @@ Necessidade: impedir ou reduzir contato iniciado por contas não gerenciadas
 
 ## Conceitos importantes
 
+## Conceitos importantes
+
 No Microsoft Teams, existem cenários diferentes de colaboração externa:
 
 | Recurso | Descrição |
