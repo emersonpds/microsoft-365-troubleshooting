@@ -359,7 +359,7 @@ Specific people / Pessoas específicas
 
 Solicite ao usuário externo que teste em:
 
-* Aba InPrivate/InPrivate.
+* Aba anônima/InPrivate.
 * Outro navegador.
 * Sem sessão anterior conectada.
 * Usando exatamente o e-mail que recebeu o convite.
