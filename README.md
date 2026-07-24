@@ -20,7 +20,7 @@ Compartilhar procedimentos práticos baseados em cenários reais de suporte téc
 - [Exchange Online](./exchange-online/)
 - [Microsoft Teams](./teams/)
 - OneDrive
-- SharePoint Online
+- [SharePoint Online](sharepoint-online/)
 - Microsoft Entra ID
 - Azure
 - PowerShell
